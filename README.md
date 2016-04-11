@@ -1,2 +1,42 @@
 # redux-crud-api-middleware
 Redux Crud Api Middleware
+
+## Proposal
+
+Given a a model or entity, generate a CRUD api to handle those requests.
+
+Example:
+
+```es6
+const PRODUCTS_URL = '/api/products'
+crudApi('PRODUCT', PRODUCTS_URL)
+```
+
+Would generate the following routes/actions:
+
+- create (POST) `/api/products`
+- read (GET) `/api/products` and `/api/products/{id}`
+- update (PUT/PATCH) `/api/products/{id}`
+- delete (DELETE) `/api/products/{id}`
+
+```es6
+const CREATE_PRODUCT_REQUEST = 'CREATE_PRODUCT_REQUEST'
+const CREATE_PRODUCT_SUCCESS = 'CREATE_PRODUCT_SUCCESS'
+const CREATE_PRODUCT_FAILURE = 'CREATE_PRODUCT_FAILURE'
+const CREATE_PRODUCT_RESET   = 'CREATE_PRODUCT_RESET'
+
+const GET_PRODUCTS_REQUEST   = 'GET_PRODUCTS_REQUEST'
+const GET_PRODUCTS_SUCCESS   = 'GET_PRODUCTS_SUCCESS'
+const GET_PRODUCTS_FAILURE   = 'GET_PRODUCTS_FAILURE'
+const GET_PRODUCTS_RESET     = 'GET_PRODUCTS_RESET'
+
+const UPDATE_PRODUCT_REQUEST = 'UPDATE_PRODUCT_REQUEST'
+const UPDATE_PRODUCT_SUCCESS = 'UPDATE_PRODUCT_SUCCESS'
+const UPDATE_PRODUCT_FAILURE = 'UPDATE_PRODUCT_FAILURE'
+const UPDATE_PRODUCT_RESET   = 'UPDATE_PRODUCT_RESET'
+
+const DELETE_PRODUCT_REQUEST = 'DELETE_PRODUCT_REQUEST'
+const DELETE_PRODUCT_SUCCESS = 'DELETE_PRODUCT_SUCCESS'
+const DELETE_PRODUCT_FAILURE = 'DELETE_PRODUCT_FAILURE'
+const DELETE_PRODUCT_RESET   = 'DELETE_PRODUCT_RESET'
+```
