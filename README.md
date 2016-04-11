@@ -1,9 +1,8 @@
 # redux-crud-api-middleware
 Redux Crud Api Middleware
 
-## Other possible sources of interest
-- https://github.com/vojtatranta/simple-redux-crud
-- https://github.com/jsdmc/react-redux-router-crud-boilerplate
+### Other possible sources of interest
+- https://github.com/agraboso/redux-api-middleware
 - https://github.com/reactjs/redux/issues/1353
 
 ## Proposal
