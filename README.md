@@ -34,9 +34,9 @@ const GET_PRODUCTS_REQUEST   = 'GET_PRODUCTS_REQUEST'
 const GET_PRODUCTS_SUCCESS   = 'GET_PRODUCTS_SUCCESS'
 const GET_PRODUCTS_FAILURE   = 'GET_PRODUCTS_FAILURE'
 
-const GET_PRODUCT_REQUEST   = 'GET_PRODUCT_REQUEST'
-const GET_PRODUCT_SUCCESS   = 'GET_PRODUCT_SUCCESS'
-const GET_PRODUCT_FAILURE   = 'GET_PRODUCT_FAILURE'
+const GET_PRODUCT_REQUEST    = 'GET_PRODUCT_REQUEST'
+const GET_PRODUCT_SUCCESS    = 'GET_PRODUCT_SUCCESS'
+const GET_PRODUCT_FAILURE    = 'GET_PRODUCT_FAILURE'
 
 const UPDATE_PRODUCT_REQUEST = 'UPDATE_PRODUCT_REQUEST'
 const UPDATE_PRODUCT_SUCCESS = 'UPDATE_PRODUCT_SUCCESS'
@@ -47,7 +47,10 @@ const DELETE_PRODUCT_SUCCESS = 'DELETE_PRODUCT_SUCCESS'
 const DELETE_PRODUCT_FAILURE = 'DELETE_PRODUCT_FAILURE'
 ```
 
-The api should be configurable to handle different scenarios and different libraries. `Fetch` or `axios` would be a good first project.
+The api should be configurable to handle different scenarios and different libraries. 
+- `fetch`
+- `axios`
+- `superagent` are all decent starters. I'd be willing to work either either of these with the potential to throw in your own config in later releases.
 
 Possible `crudApi` implementation (with some holes)
 
