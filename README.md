@@ -63,7 +63,7 @@ class CrudApi {
     this.xhr = xhr;
   }
   
-  create() {
+  create(body) {
     return this.sendRequest('POST', url, query, body)
   }
   
