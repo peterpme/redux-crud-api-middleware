@@ -21,6 +21,16 @@ const fetchProducts = () => api.fetch()
 const fetchProduct  = (id) => api.fetch(id)
 const updateProduct = (id, body) => api.update(id, body)
 const deleteProduct = (id) => api.delete(id)
+
+// ...
+
+combineReducers({
+users,
+todos,
+products: crudApi('PRODUCT', PRODUCTS_URL)
+})
+
+// ...
 ```
 
 Would generate the following routes/actions behind the scenes:
