@@ -12,6 +12,8 @@ Given a a model or entity, generate a CRUD api to handle those requests.
 
 Example:
 
+In this scenario, you're still in charge of the reducer and any changes that may accompany it.
+
 ```es6
 const PRODUCTS_URL = '/api/products'
 const api = crudApi('PRODUCT', PRODUCTS_URL)
@@ -23,7 +25,7 @@ const updateProduct = (id, body) => api.update(id, body)
 const deleteProduct = (id) => api.delete(id)
 ```
 
-or (I like this approach better)
+or something like this, where a lot of the magic has been hidden from you
 
 ```es6
 // ...
