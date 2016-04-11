@@ -66,10 +66,10 @@ const DELETE_PRODUCT_SUCCESS = 'DELETE_PRODUCT_SUCCESS'
 const DELETE_PRODUCT_FAILURE = 'DELETE_PRODUCT_FAILURE'
 ```
 
-The api should be configurable to handle different scenarios and different libraries. 
+The api should be configurable to handle different scenarios and different libraries. I'd like to support at least one of these for version 1.0:
 - `fetch`
 - `axios`
-- `superagent` are all decent starters. I'd be willing to work either either of these with the potential to throw in your own config in later releases.
+- `superagent` 
 
 Possible `crudApi` implementation (with some holes)
 
