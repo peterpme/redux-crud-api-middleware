@@ -23,7 +23,7 @@ const updateProduct = (id, body) => api.update(id, body)
 const deleteProduct = (id) => api.delete(id)
 ```
 
-or 
+or (I like this approach better)
 
 ```es6
 // ...
