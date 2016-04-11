@@ -1,6 +1,11 @@
 # redux-crud-api-middleware
 Redux Crud Api Middleware
 
+## Other possible sources of interest
+- https://github.com/vojtatranta/simple-redux-crud
+- https://github.com/jsdmc/react-redux-router-crud-boilerplate
+- https://github.com/reactjs/redux/issues/1353
+
 ## Proposal
 
 Given a a model or entity, generate a CRUD api to handle those requests.
