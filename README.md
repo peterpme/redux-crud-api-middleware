@@ -49,3 +49,53 @@ const DELETE_PRODUCT_RESET   = 'DELETE_PRODUCT_RESET'
 
 The api should be configurable to handle different scenarios and different libraries. `Fetch` or `axios` would be a good first project.
 
+```es6
+
+class CrudApi {
+  constructor(entity, endpoint, xhr) {
+    this.entity = entity;
+    this.endpoint = endpoint;
+    this.xhr = xhr;
+  }
+  
+  create() {
+    return this.sendRequest('POST', url, query, body)
+  }
+  
+  fetch(id) {
+    return this.sendRequest('GET', url, query, body)
+  }
+  
+  update(id, body) {
+    return this.sendRequest('PUT', url, query, body)
+  }
+  
+  delete(id) {
+    return this.sendRequest('DELETE', url, query, body)
+  }
+  
+  handleResponse(err, payload) {
+    if (err) return this.handleError(err, payload)
+    return resolve(payload)
+  }
+  
+  handleError(err, payload) {
+    if (err.status === 401) this.handleUnauthorized()
+    return reject(err, payload)
+  }
+  
+  sendRequest(method, url, query, body, headers, host) {
+  
+    return new Promise((resolve, reject) => {
+      if (headers) xhr.set(headers)
+      if (body) xhr.send(body)
+      if (query) xhr.query(query)
+      
+      xhr.end((err, payload) => this.handleResponse(err, payload))
+    })
+    
+  }
+  
+}
+
+```
