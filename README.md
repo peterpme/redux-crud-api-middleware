@@ -21,7 +21,11 @@ const fetchProducts = () => api.fetch()
 const fetchProduct  = (id) => api.fetch(id)
 const updateProduct = (id, body) => api.update(id, body)
 const deleteProduct = (id) => api.delete(id)
+```
 
+or 
+
+```es6
 // ...
 
 combineReducers({
