@@ -18,7 +18,7 @@ const updateProduct = (id, body) => api.update(id, body)
 const deleteProduct = (id) => api.delete(id)
 ```
 
-Would generate the following routes/actions:
+Would generate the following routes/actions behind the scenes:
 
 - create (POST) `/api/products`
 - read (GET) `/api/products` and `/api/products/{id}`
